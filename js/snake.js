@@ -1,11 +1,11 @@
 import { getDirecaoTeclado } from './input.js';
 
 //variáveis
-export const SNAKE_SPEED = 10;
-const snake = [ {x: 16, y: 16}/*,
-{x: 17, y: 16}*/];
+export const SNAKE_SPEED = 15;
+const snake = [ {x: 16, y: 16},
+                {x: 17, y: 16}];
 let novoSegmento = 0;
-let direcao = [{x : 0, y: 0, z: 0}];
+let direcao;
 
 export function atualizar (){
     
@@ -20,13 +20,17 @@ export function atualizar (){
 }
 
 export function desenhar(gameBoard){
-    snake.forEach(segment => {
+    for (let i = 0; i < snake.length; i++){
         const snakeElement = document.createElement('div');
-        snakeElement.style.gridRowStart = segment.x;
-        snakeElement.style.gridColumnStart = segment.y;
+        snakeElement.style.gridRowStart = snake[i].x;
+        snakeElement.style.gridColumnStart = snake[i].y;
+        if(i==0){
+            snakeElement.classList.add('snakeHead');
+        } else {
         snakeElement.classList.add('snake');
+        }
         gameBoard.appendChild(snakeElement);
-    })
+    }
 }
 
 export function expandirSnake(qtd){

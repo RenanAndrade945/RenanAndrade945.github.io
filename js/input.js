@@ -1,5 +1,5 @@
 //variaveis
-let direcao = { x : 0, y : 0};
+let direcao = { x : -1, y : 0};
 let ultimaDirecao = { x : 0, y: 0 }
 
 //event listener
