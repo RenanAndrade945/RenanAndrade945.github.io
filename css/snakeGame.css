@@ -20,6 +20,37 @@ body {
     border-width: 10px;
 }
 
+.menu-game{
+    grid-column-start: 5;
+    grid-column-end: 27;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    font-size: 96px;
+    font-style: oblique;
+    color: yellow;
+    text-align: center;
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    user-select: none;
+}
+
+#btn-jogar{
+    grid-column-start: 8;
+    grid-column-end: 25;
+    grid-row-start: 20;
+    grid-row-end: 23;
+    color: black;
+    background-color: yellow;
+    font-size: 24px;
+    text-align: center;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+#btn-jogar:hover{
+    background-color: rgb(170,170,0);
+    color: white;
+    cursor: pointer;
+}
+
 .snake{
     background-color: rgb(0, 180, 120) ;
     border-style .10vmin solid black ;

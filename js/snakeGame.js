@@ -8,15 +8,19 @@ let ultimoFrame = 0;
 let gameOver = false;
 const gameBoard = document.getElementById('game-board');
 
-//
-function main(currentTime){
+
+function main(){
+    document.getElementById ('btn-jogar').addEventListener("click", jogo, false);
+}
+
+function jogo(currentTime){
     
     if (gameOver){
         alert('Voce falhou');
         return;
     }
     
-    window.requestAnimationFrame(main);
+    window.requestAnimationFrame(jogo);
     const tempoDesdeUltimoFrame = (currentTime - ultimoFrame) / 1000;
     
     if (tempoDesdeUltimoFrame < 1 / SNAKE_SPEED) return;
